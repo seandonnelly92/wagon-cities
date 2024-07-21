@@ -22,7 +22,16 @@ module.exports = {
       {
         test: /\.s?css$/,
         exclude: /node_modules/,
-        loaders: [ 'style-loader', 'css-loader', 'sass-loader' ]
+        use: [
+          'style-loader',
+          'css-loader',
+          {
+            loader: 'sass-loader',
+            options: {
+              implementation: require('sass'), // Use dart-sass
+            },
+          },
+        ]
       },
       {
         test: /\.html$/,
@@ -31,6 +40,6 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: [ '.js', '.jsx' ]
+    extensions: ['.js', '.jsx']
   }
 };

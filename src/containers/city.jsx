@@ -4,9 +4,9 @@ class City extends Component {
   render() {
     return (
       <div className="city">
-        TODO: City
+        <h5>{this.props.city.name}</h5>
       </div>
-    )
+    );
   }
 }
 

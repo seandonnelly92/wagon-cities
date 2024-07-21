@@ -1,15 +1,15 @@
-import React from 'react';
-import City from '../containers/city';
+import React, { Component } from 'react';
 import CityList from '../containers/city_list';
 
 
-const App = () => {
-  return (
-    <div className="app">
-      <CityList />
-      <City />
-    </div>
-  );
-};
+class App extends Component {
+  render() {
+    return (
+      <div className="app">
+          <CityList />
+      </div>
+    )
+  }
+}
 
 export default App;
